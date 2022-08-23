@@ -1,0 +1,465 @@
+html, body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+  min-height: 620px;
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+}
+
+.promo {
+  height: 100vh;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.promo h1 {
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  color: #FFF;
+  margin: 0;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+}
+.promo div {
+  display: flex;
+  justify-content: space-evenly;
+}
+.promo div img {
+  width: 250px;
+}
+
+.promo-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.promo-list ul {
+  font-size: 26px;
+  color: #FFF;
+  font-weight: 400;
+  margin: 0;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+  list-style-position: inside;
+  padding: 0;
+}
+.promo-list ul li {
+  margin-bottom: 20px;
+}
+.promo-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.scroll-button {
+  padding: 20px 80px;
+  font-size: 24px;
+  font-weight: 400;
+  border: 2px solid darkslategray;
+  background-color: #0D5C63;
+  color: #FFF;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 300px;
+}
+
+.scroll-button:hover {
+  border: 2px solid darkslategray;
+  background-color: #FFF;
+  color: #0D5C63;
+  transition: 0.4s;
+}
+
+.composition-equalizer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 320px;
+}
+
+.composition {
+  display: grid;
+  grid-template-columns: 150px 100px 200px 100px 150px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+}
+.composition .composition-arrows {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+.composition .composition-arrows div {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+.composition .composition-arrows div img {
+  width: 80px;
+}
+.composition .composition-arrows:nth-child(2) div:first-child img {
+  transform: rotate(20deg);
+  margin-top: 50px;
+}
+.composition .composition-arrows:nth-child(2) div:nth-child(2) img {
+  margin-left: 5px;
+}
+.composition .composition-arrows:nth-child(2) div:last-child img {
+  transform: rotate(-20deg);
+  margin-bottom: 50px;
+}
+.composition .composition-arrows:nth-child(4) div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.composition .composition-arrows:nth-child(4) div:first-child img {
+  transform: rotate(160deg);
+  margin-top: 50px;
+}
+.composition .composition-arrows:nth-child(4) div:nth-child(2) img {
+  transform: rotate(180deg);
+  margin-right: 5px;
+}
+.composition .composition-arrows:nth-child(4) div:last-child img {
+  transform: rotate(200deg);
+  margin-bottom: 50px;
+}
+.composition .composition-image {
+  display: flex;
+  align-items: center;
+}
+.composition .composition-image img {
+  width: 200px;
+}
+
+.composition-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+.composition-items div {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url("../media/composition-item.jpg") center center/cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.composition-items div p {
+  margin: 0;
+  font-size: 20px;
+  color: #FFF;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+}
+.composition-items div:last-child {
+  margin: 0;
+}
+
+.composition-bg {
+  background: rgb(168, 27, 189);
+  background: linear-gradient(31deg, rgb(168, 27, 189) 0%, rgb(0, 255, 188) 34%, rgb(68, 187, 246) 63%, rgb(118, 197, 213) 86%);
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+
+.slider-bg {
+  background: rgb(118, 197, 213);
+  background: linear-gradient(329deg, rgb(118, 197, 213) 14%, rgb(68, 187, 246) 37%, rgb(0, 255, 188) 56%, rgb(168, 27, 189) 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.product-description-bg {
+  background: rgb(168, 27, 189);
+  background: linear-gradient(31deg, rgb(168, 27, 189) 0%, rgb(0, 255, 188) 34%, rgb(68, 187, 246) 63%, rgb(118, 197, 213) 86%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-description {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.product-description div:first-child {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+.product-description div:first-child img {
+  max-width: 350px;
+}
+.product-description div:first-child div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.product-description div:first-child div p {
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+  max-width: 300px;
+  color: #FFF;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+}
+.product-description div:last-child ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.product-description div:last-child ul li {
+  font-size: 24px;
+  color: #FFF;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+}
+
+.order-bg {
+  background: rgb(118, 197, 213);
+  background: linear-gradient(329deg, rgb(118, 197, 213) 14%, rgb(68, 187, 246) 37%, rgb(0, 255, 188) 56%, rgb(168, 27, 189) 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.order {
+  width: 100%;
+}
+.order h2 {
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  color: #FFF;
+  margin: 0;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+}
+.order h3 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFF;
+  margin: 0;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+}
+
+.order-content {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.order-content-price img {
+  width: 220px;
+  margin-bottom: 10px;
+}
+.order-content-price div {
+  display: flex;
+  align-items: center;
+}
+.order-content-price div div {
+  margin-right: 10px;
+}
+.order-content-price div div span {
+  display: inline-block;
+  font-size: 30px;
+  color: gold;
+  font-weight: 700;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+.order-content-price div p {
+  color: gold;
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+  position: relative;
+  font-size: 18px;
+}
+.order-content-price div p:before {
+  border-bottom: 2px solid red;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 25%;
+  transform: rotate(-12deg);
+}
+
+.order-form {
+  width: 320px;
+  display: flex;
+  align-items: center;
+}
+.order-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.order-form form label {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #FFF;
+  text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+}
+.order-form form input {
+  margin-bottom: 40px;
+  padding: 15px 40px;
+  font-size: 22px;
+  border-radius: 20px;
+  border: 2px solid darkslategray;
+  outline: none;
+}
+.order-form form input::placeholder {
+  font-size: 16px;
+}
+.order-form form button {
+  padding: 20px 0;
+  font-size: 30px;
+  border: 2px solid darkslategray;
+  background-color: #0D5C63;
+  color: #FFF;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-bottom: 20px;
+}
+.order-form form button:hover {
+  color: #0D5C63;
+  background-color: #FFFFFF;
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  .promo h1 {
+    margin-bottom: 10px;
+  }
+  .promo div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .promo div img {
+    width: 200px;
+  }
+  .promo div ul {
+    margin: 10px 0;
+    max-width: 300px;
+    font-size: 22px;
+  }
+  .promo div button {
+    margin-top: 10px;
+  }
+  .composition-equalizer button {
+    margin-top: 20px;
+  }
+  .composition {
+    display: grid;
+    width: 320px;
+    grid-template: "LevelUp LevelUp" 160px "LevelUp LevelUp" 160px "items1 items2" 1fr "items1 items2" 1fr/1fr 1fr;
+    justify-items: center;
+    grid-gap: 10px;
+  }
+  .composition .composition-image {
+    grid-area: LevelUp;
+  }
+  .composition .composition-items:first-child {
+    grid-area: items1;
+  }
+  .composition .composition-items:last-child {
+    grid-area: items2;
+  }
+  .composition .composition-arrows {
+    display: none;
+  }
+}
+.mySlides div:nth-child(2) img {
+  width: 470px;
+  height: 270px;
+}
+.mySlides h2 {
+  font-size: 20px;
+}
+.mySlides p {
+  font-size: 18px;
+}
+
+.product-description div:first-child {
+  align-items: center;
+  flex-direction: column;
+}
+.product-description div:first-child img {
+  width: 310px;
+}
+.product-description div:first-child div p {
+  font-size: 24px;
+}
+.product-description div:first-child div button {
+  margin-top: 20px;
+}
+.product-description div:last-child ul {
+  flex-direction: column;
+  align-items: center;
+  list-style-position: inside;
+  padding: 0;
+}
+
+.order-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-form form {
+  width: 300px;
+}
+.order-form form input::placeholder {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  .mySlides div:nth-child(2) img {
+    width: 310px;
+    height: 190px;
+  }
+}
+@keyframes flip {
+  0%, 80% {
+    transform: rotateY(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
